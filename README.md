@@ -1,61 +1,64 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<img src="https://github.com/user-attachments/assets/9bb08b29-b35b-4094-b49d-6642bd7ce705" alt="Imagem" height="80">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## About the project
 
-## About Laravel
+This is a simple to-do list API built with Laravel. It was created for portfolio purposes to practice Laravel fundamentals, focusing on RESTful API structure and CRUD operations.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- User authentication (login, logout, get current user)
+- Create, view, update, and delete events
+- Create, view, and delete attendees
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### Technologies
 
-## Learning Laravel
+- Laravel  
+- PHP  
+- SQLite  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Main Files
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### Routes
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- [routes/api.php](routes/api.php) - Application route definitions
 
-## Laravel Sponsors
+#### Models
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- [app/Http/Models/Attendee.php](app/Http/Models/Attendee.php) - Attendee model  
+- [app/Http/Models/Event.php](app/Http/Models/Event.php) - Event model  
+- [app/Http/Models/User.php](app/Http/Models/User.php) - User model  
 
-### Premium Partners
+#### Controllers
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- [app/Http/Controllers/Api/AttendeeController.php](app/Http/Api/AttendeeController.php) - Attendee controller  
+- [app/Http/Controllers/Api/EventController.php](app/Http/Api/EventController.php) - Event controller  
+- [app/Http/Controllers/Api/AuthController.php](app/Http/Api/AuthController.php) - Auth controller  
 
-## Contributing
+#### Resources
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- [app/Http/Controllers/Resources/AttendeeResource.php](app/Http/Resources/AttendeeResource.php) - Attendee resource  
+- [app/Http/Controllers/Resources/EventResource.php](app/Http/Resources/EventResource.php) - Event resource  
+- [app/Http/Controllers/Resources/UserResource.php](app/Http/Resources/UserResource.php) - User resource  
 
-## Code of Conduct
+## Endpoints
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Auth
 
-## Security Vulnerabilities
+- `POST /login` — Login
+- `GET /user` — Get authenticated user
+- `POST /logout` — Logout
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Events
 
-## License
+- `GET /events` — Get all events
+- `GET /events/{id}` — Get single event
+- `POST /events` — Create an event
+- `PUT /events/{id}` — Update an event
+- `DELETE /events/{id}` — Delete an event
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Attendees
+
+- `GET /attendees` — Get all attendees
+- `GET /attendees/{id}` — Get single attendee
+- `POST /attendees` — Create an attendee
+- `DELETE /attendees/{id}` — Delete an attendee
