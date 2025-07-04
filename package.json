@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "publish": "git add . && git pull && git commit -m 'laravel-api' && git push"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
