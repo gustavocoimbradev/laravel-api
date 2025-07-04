@@ -2,7 +2,7 @@
 
 ## About the project
 
-This is a simple to-do list API built with Laravel. It was created for portfolio purposes to practice Laravel fundamentals, focusing on RESTful API structure and CRUD operations.
+This is a simple API built with Laravel. It was created for portfolio purposes to practice Laravel fundamentals, focusing on RESTful API structure and CRUD operations.
 
 #### Features
 
